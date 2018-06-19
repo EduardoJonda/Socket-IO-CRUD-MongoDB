@@ -1,0 +1,43 @@
+extends home
+block content
+
+    h1 Ejemplo de CRUD con Socket IO
+    .col-xs-4
+        form#formulario
+            .form-group
+                label(for="_id") ID
+                input#_id.form-control(type="text", placeholder="ID del usuario")
+            .form-group
+                label(for="first_name") Nombres
+                input#first_name.form-control(type="text", placeholder="Su nombre" name='first_name')
+            .form-group
+                label(for="last_name") Apellidos
+                input#last_name.form-control(type="text", placeholder="Sus apellidos" name='last_name')
+            .form-group
+                label(for="timezona") Regi&oacute;n
+                input#timezona.form-control(type="text", placeholder="-5" value="-5" name='timezona')
+            .form-group
+                label(for="locale") Idioma
+                input#locale.form-control(type="text", placeholder="Idioma de preferencia" name='locale')
+            .form-group
+                label(for="profile_pic") Foto
+                input#profile_pic.form-control(type="text", placeholder="URL de foto" name='profile_pic')
+            .form-group
+                label(for="boleano") Boleano
+                select#boleano.form-control(name='boleano')
+                  option(value='true') Si
+                  option(value='false') No
+            button.btn.btn-default(type="submit") Guardar
+    .col-xs-8
+        table.table.table-striped.table-bordered.table-hover
+           thead
+              tr
+              th ID
+              th Nombres
+              th Apellidos
+              th Zona Horaria
+              th Idioma
+              th Foto
+              th Boleano
+           tbody
+
